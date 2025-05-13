@@ -2,8 +2,8 @@ import axios from "axios";
 
 // Define API base URL for development/production
 const baseURL = import.meta.env.PROD
-  ? "http://production-url.com/api"
-  : "http://localhost:5000/api";
+  ? "https://notekeepbook.onrender.com/api"
+  : "https://notekeepbook.onrender.com/api";
 
 // Create axios instance
 const api = axios.create({

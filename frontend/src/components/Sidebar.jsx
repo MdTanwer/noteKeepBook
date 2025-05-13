@@ -103,7 +103,7 @@ const Sidebar = ({ onSelectGroup }) => {
           </button>
         )}
       </div>
-
+      <br />
       <div className="groups-list">
         {groups.map((group) => (
           <div
