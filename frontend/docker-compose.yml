@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: tanwir01/frontend:v7
+    ports:
+      - "0.0.0.0:3001:80" # Explicitly bind to all interfaces
+    restart: unless-stopped
+    environment:
+      - VITE_API_URL=http://13.61.0.9:5000/api
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
